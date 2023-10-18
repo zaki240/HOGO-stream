@@ -1,27 +1,130 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+     :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient( 45deg, #541365, #2b3481);
+}
+
+
+/* .navbar {
+    background-color: white;
+} */
+
+
+/* .navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+    display: none;
+} */
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+.navbar {
+    /* box-shadow: 0px 5px 10px 0px #aaa; */
+    /* position: fixed; */
+    width: 100%;
+    background: #ffffff30;
+    color: #fff;
+    opacity: 0.85;
+    z-index: 100;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+
+.menu-items {
+    display: flex;
+}
+
+.logo {
+    font-size: 2.3rem;
+}
+
+.menu-items li {
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #117964;
+}
+
+.search {
+    background-color: transparent;
+    border: 1.5px solid white;
+    border-radius: 50px;
+    padding: 5px;
+    padding-left: 10px;
+    width: 300px;
+}
+
+.search:focus {
+    outline: none;
+}
+
+.carousel {
+    background: #ffffff30;
+    color: #fff;
+    opacity: 0.85;
+}
+
+.display-movies {
+    margin: 10px;
+    background: #ffffff30;
+    color: #fff;
+    opacity: 0.85;
+    width: 80%;
+    padding: 10px;
+}
+
+.card {
+    width: 160px;
+    /* border: 1px solid white; */
+    border-radius: 10px;
+    /* height: 200px; */
+    /* border: 1px solid white; */
+}
+
+.card img {
+    padding: 4px;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.card-year {
+    color: #ddd;
+    font-size: 15px;
 }
