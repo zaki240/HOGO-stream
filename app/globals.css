@@ -23,9 +23,9 @@ html {
 
 body {
     color: rgb(var(--foreground-rgb));
-    background: linear-gradient(45deg, #aa0000, #0000aa);
+    /* background: linear-gradient(45deg, #aa0000, #0000aa); */
     /* background: linear-gradient(45deg, black, #202020); */
-    /* background: linear-gradient( 45deg, #541365, #2b3481); */
+    background: linear-gradient( 45deg, #541365, #2b3481);
     /* background-image: url("https://s7d9.scene7.com/is/image/wheelpros/tsw-bathurst-17x9-18x9.5-silver%20w%20mirror%20cut%20face-1993%20acura%20nsx%2010"); */
 }
 
@@ -164,6 +164,9 @@ body {
 }
 
 .fullcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
     width: 98%;
     background: #ffffff30;
     /* border: 2px solid white; */
@@ -244,39 +247,62 @@ body {
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
-    gap: 2%;
+    /* gap: 2%; */
 }
 
 .tags a {
-    padding: 3px;
+    /* padding: 3px; */
     color: #dddddd;
     /* background-color: red; */
 }
 
 .tags a:hover {
-    padding: 3px;
+    /* padding: 3px; */
     color: grey;
     /* background-color: red; */
 }
 
+.mainframe {}
 
-/* .rating-circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.reco-tab {
+    padding: 2px;
+    width: auto;
+}
+
+.reco-card {
+    margin-bottom: 5px;
+    /* display: flex; */
+}
+
+.reco-desc {
+    width: 200px;
+}
+
+.reco-desc h3 {
+    font-size: 14px;
+}
+
+.reco-img {
+    margin: 2px;
+}
+
+.reco-img img {
     width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background: radial-gradient( closest-side, lightgray 79%, transparent 80% 100%), conic-gradient(gray 75%, lightgray 0);
 }
 
-.rating-circle::before {
-    content: "75%";
-    color: black;
+.reco-rat {
+    font-size: 12px;
 }
 
-progress {
-    visibility: hidden;
-    height: 0;
-    width: 0
-} */
+.reco-tags {
+    font-size: 12px;
+}
+
+.reco-tags a:hover {
+    color: gray;
+    font-size: 12px;
+}
+
+.human-resource {
+    border-color: lightslategray;
+}
