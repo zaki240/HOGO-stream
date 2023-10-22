@@ -5,6 +5,8 @@
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
+    --screen-x: 1280px;
+    --screen-y: 720px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,9 +17,16 @@
     }
 }
 
+html {
+    background-color: black;
+}
+
 body {
     color: rgb(var(--foreground-rgb));
-    background: linear-gradient( 45deg, #541365, #2b3481);
+    background: linear-gradient(45deg, #aa0000, #0000aa);
+    /* background: linear-gradient(45deg, black, #202020); */
+    /* background: linear-gradient( 45deg, #541365, #2b3481); */
+    /* background-image: url("https://s7d9.scene7.com/is/image/wheelpros/tsw-bathurst-17x9-18x9.5-silver%20w%20mirror%20cut%20face-1993%20acura%20nsx%2010"); */
 }
 
 
@@ -111,12 +120,28 @@ body {
     width: 160px;
     /* border: 1px solid white; */
     border-radius: 10px;
+    /* transform: scale(100%); */
+    /* transition: transform .2s ease-in; */
+    background: transparent;
     /* height: 200px; */
     /* border: 1px solid white; */
 }
 
-.card img {
+
+/* .card img {
     padding: 4px;
+} */
+
+.image-container {
+    width: 160px;
+    height: 230px;
+    overflow: hidden;
+    /* border: 1px solid white; */
+}
+
+.image-container img {
+    transform: scale(100%);
+    transition: transform .3s ease;
 }
 
 .card-title {
@@ -128,3 +153,130 @@ body {
     color: #ddd;
     font-size: 15px;
 }
+
+.card:hover .image-container img {
+    transform: scale(130%);
+    transition: all .3s ease;
+}
+
+.movie-main {
+    padding: 1%;
+}
+
+.fullcontainer {
+    width: 98%;
+    background: #ffffff30;
+    /* border: 2px solid white; */
+    padding: 10px;
+}
+
+.screen-container {
+    width: calc(var(--screen-x) / 1.4);
+    /* border: 2px solid blue; */
+}
+
+.screen-subcontainer {
+    /* can change */
+    width: calc(var(--screen-x) / 1.4);
+    height: calc(var(--screen-y) / 1.4);
+    background-color: black;
+    /* border: 2px solid red; */
+}
+
+.screen {
+    width: calc(var(--screen-x) / 1.4);
+    height: calc(var(--screen-y) / 1.4);
+}
+
+.frame-setting {
+    display: flex;
+    /* padding: 5px; */
+    background-color: #303050;
+}
+
+.frame-setting button {
+    padding: 5px;
+    margin: 5px;
+}
+
+.frame-setting button:hover {
+    color: gray;
+}
+
+.frame-setting button:active {
+    color: white;
+}
+
+.movie-description {
+    width: calc(var(--screen-x) / 1.4);
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.movie-description img {
+    width: 160px;
+    height: 230px;
+}
+
+.description h1 {
+    font-size: 30px;
+    /* font-weight: bold; */
+}
+
+.description {}
+
+.subinfo {
+    color: #aaaaaa;
+    display: flex;
+    gap: 2%;
+    /* width: 100%; */
+    /* border: 2px solid red; */
+}
+
+.rating {
+    font-size: 30px;
+    /* font-weight: bold; */
+    color: #dddddd;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    gap: 2%;
+}
+
+.tags a {
+    padding: 3px;
+    color: #dddddd;
+    /* background-color: red; */
+}
+
+.tags a:hover {
+    padding: 3px;
+    color: grey;
+    /* background-color: red; */
+}
+
+
+/* .rating-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: radial-gradient( closest-side, lightgray 79%, transparent 80% 100%), conic-gradient(gray 75%, lightgray 0);
+}
+
+.rating-circle::before {
+    content: "75%";
+    color: black;
+}
+
+progress {
+    visibility: hidden;
+    height: 0;
+    width: 0
+} */
