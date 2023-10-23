@@ -23,9 +23,9 @@ html {
 
 body {
     color: rgb(var(--foreground-rgb));
-    /* background: linear-gradient(45deg, #aa0000, #0000aa); */
+    background: linear-gradient(45deg, #aa0000, #0000aa);
     /* background: linear-gradient(45deg, black, #202020); */
-    background: linear-gradient( 45deg, #541365, #2b3481);
+    /* background: linear-gradient( 45deg, #541365, #2b3481); */
     /* background-image: url("https://s7d9.scene7.com/is/image/wheelpros/tsw-bathurst-17x9-18x9.5-silver%20w%20mirror%20cut%20face-1993%20acura%20nsx%2010"); */
 }
 

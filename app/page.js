@@ -1,6 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/app/_component/navbar";
+import pb from "@/app/_lib/pocketbase";
+
+// const records = await pb.collection("Movie").getFullList({
+//   sort: "-created",
+// });
 
 const movies = [
   {
@@ -49,13 +54,21 @@ function titleShortener(titlestring) {
   }
 }
 
-function Card({ title, img, year, link }) {
+function Card({ title, img, year, link, id, collectionid }) {
   return (
     <a href={link} className="card">
       <div className="image-container">
-        <img src={img} width="{160}" alt={title} />
+        <img
+          src={
+            process.env.NEXT_PUBLIC_POCKETBASE_URL +
+            `api/files/${collectionid}/${id}/` +
+            img
+          }
+          width="{160}"
+          alt={title}
+        />
       </div>
-      <p className="card-title">{titleShortener(title)}</p>
+      <p className="card-title line-clamp-1">{title}</p>
       <p className="card-year">{year}</p>
     </a>
   );
@@ -73,7 +86,9 @@ export default function Home() {
             title={movie.title}
             img={movie.img}
             year={movie.year}
-            link={movie.link}
+            link={movie.url}
+            id={movie.id}
+            collectionid={movie.collectionId}
             key={i}
           />
         ))}
