@@ -27,15 +27,24 @@
   </head>
 
   <body>
-    <div class="progress-bar">
-      <progress
-        value="75"
-        min="0"
-        max="100"
-        style="visibility: hidden; height: 0; width: 0"
-      >
-        75%
-      </progress>
-    </div>
+    <input type="number" name="number" id="number" />
+    <!-- <input type="file" accept="image/*" class="input" /> -->
+    <script>
+      const fileInput = document.querySelector(".input");
+      let theFile = {};
+      fileInput.addEventListener("change", function () {
+        for (let file of fileInput.files) {
+          theFile = file;
+          console.log(theFile);
+        }
+      });
+
+      const arrr = ["e", "a"];
+      // console.log(typeof arrr);
+
+      function john() {
+        return "john";
+      }
+    </script>
   </body>
 </html>
