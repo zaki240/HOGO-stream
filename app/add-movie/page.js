@@ -31,6 +31,7 @@ export default function AddMovie() {
         // await sleep(10000);
         const record = await pb.collection("movie").create(data);
         console.log(record);
+        alert("success");
         setCooldown(false);
       } catch (err) {
         console.log(err);
@@ -45,7 +46,11 @@ export default function AddMovie() {
 
   return (
     <main className="min-h-screen  flex flex-col items-center p-2 pt-4 text-black i">
-      <form class="w-full max-w-sm" onSubmit={handleSubmit(onSubmit)}>
+      <h1 className="text-white">ADD MOVIE</h1>
+      <form
+        class="w-full max-w-sm default-bg p-2"
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <div>
           <label
             for="first_name"

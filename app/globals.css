@@ -40,6 +40,12 @@ body {
     display: none;
 } */
 
+.default-bg {
+    background: #ffffff30;
+    color: #fff;
+    opacity: 0.85;
+}
+
 .container {
     max-width: 1200px;
     width: 90%;
@@ -168,7 +174,6 @@ body {
     flex-wrap: wrap;
     /* justify-content: space-between; */
     width: 98%;
-    background: #ffffff30;
     /* border: 2px solid white; */
     padding: 10px;
 }

@@ -80,7 +80,7 @@ export default function page({ params }) {
   //   return <div>movie title: {params.movie}</div>;
   return (
     <main className="min-h-screen  flex flex-col items-center p-2 pt-4">
-      <div className="fullcontainer">
+      <div className="fullcontainer default-bg">
         <div className="mainframe">
           <div className="screen-container">
             <div className="screen-subcontainer">
